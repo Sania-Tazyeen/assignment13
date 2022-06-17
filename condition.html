@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Of Loop</h2>
+<p>The for of statement loops through the values of any iterable object:</p>
+<!--for of-->
+
+<p id="demo"></p>
+
+<script>
+const student = ["Sania", "Muqtadir", "Mohsin", "Izhaan", "Nusairah"];
+
+let text = "";
+for (let x of student) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+<!--for in -->
+
+<p id="demo1"></p>
+
+<script>
+const person = {fname:"Sania", lname:"Tazyeen", age:26}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo1").innerHTML = txt;
+</script>
+<!--if-->
+<p id="demo2">Good Morning!</p>
+
+<script>
+if (new Date().getHours() < 13) {
+  document.getElementById("demo").innerHTML = "Good morning!";
+}
+</script>
+<!--Else -->
+<p id="demo3"></p>
+
+<script>
+const hour = new Date().getHours(); 
+let greeting;
+
+if (hour < 13) {
+  greeting = "Good morning";
+} else {
+  greeting = "Good evening";
+}
+
+document.getElementById("demo3").innerHTML = greeting;
+</script>
+
+<!--else if-->
+<p id="demo4"></p>
+<script>
+const time = new Date().getHours();
+let greetings;
+if (time < 10) {
+  greetings = "Good morning";
+} else if (time < 20) {
+  greetings = "Good day";
+} else {
+  greetings = "Good evening";
+}
+document.getElementById("demo4").innerHTML = greetings;
+</script>
+
+<!-- for loop-->
+
+<p id="demo5"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Lexus", "Ford", "Fiat", "Audi"];
+
+let car= "";
+for (let i = 0; i < cars.length; i++) {
+  car += cars[i] + "<br>";
+}
+
+document.getElementById("demo5").innerHTML = car;
+</script>
+
+<!--While-->
+<p id="demo6"></p>
+<script>
+let number = "";
+let i = 0;
+while (i < 10) {
+  number += "<br>The number is " + i;
+  i++;
+}
+document.getElementById("demo6").innerHTML = number;
+</script>
+
+<!--Do While-->
+<p id="demo7"></p>
+
+<script>
+let num = "";
+let n = 0;
+do {
+  num += n + "<br>";
+  n++;
+}
+while (n < 5);
+document.getElementById("demo7").innerHTML = num;
+</script>
+
+
+</body>
+</html>
